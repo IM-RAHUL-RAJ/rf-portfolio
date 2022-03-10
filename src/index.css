@@ -237,3 +237,163 @@ header {
 }
 /* --------------------------------- Work Section below hero section   ends  
                         -------------------------------------------------------*/
+
+
+
+                        /* --------------------------------- Skills Section starts  
+                        -------------------------------------------------------*/
+
+.service-main-container {
+  margin-top: 5rem;
+  padding: 5rem 0;
+}
+
+.service-main-container .main-heading {
+  margin: 3rem 0;
+}
+
+.work-container-subdiv {
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.16);
+}
+
+.work-container-subdiv:hover {
+  background-color: var(--bgcolor);
+  cursor: pointer;
+}
+
+.work-container-subdiv:hover > .fontawesome-style {
+  background-color: #fff;
+}
+
+.work-container-subdiv .main-hero-para {
+  width: 100%;
+}
+
+.service-main-container .work-container-subdiv .fontawesome-style {
+  text-align: left;
+  margin: 2rem 0;
+}
+
+@media (min-width: 1400px) {
+  .service-container .col-xxl-4 {
+    flex: 0 0 auto;
+    width: 30% !important;
+    margin: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .service-container .col-lg-4 {
+    flex: 0 0 auto;
+    width: 30% !important;
+    margin: 2.5rem auto;
+  }
+}
+
+/* --------------------------------- Services Section ends  
+                        -------------------------------------------------------*/
+/* --------------------------------- Contact US Section starts  
+                        -------------------------------------------------------*/
+                        .contactus-section {
+                          margin: 15rem 0;
+                        }
+                        
+                        .contact-leftside img {
+                          min-width: 80%;
+                          max-height: 30rem;
+                          height: auto;
+                        }
+                        
+                        .contact-input-feild {
+                          margin-bottom: 4rem;
+                        }
+                        
+                        .contact-rightside form .form-control {
+                          border: 1px solid #ced4da;
+                          -webkit-appearance: none;
+                          height: 5rem;
+                          border-radius: 0.5rem;
+                          font-size: 1.6rem;
+                          padding-left: 1rem;
+                          font-weight: lighter;
+                        }
+                        
+                        .contact-rightside form .form-check-input {
+                          width: 2rem;
+                          height: 2rem;
+                        }
+                        
+                        .form-checkbox-style {
+                          margin: 4rem 0;
+                        }
+                        
+                        .contact-rightside form .main-hero-para {
+                          font-size: 1.5rem;
+                          color: var(--text-color);
+                          margin: 0;
+                          font-weight: lighter;
+                          width: 75%;
+                          padding: 0 2rem;
+                        }
+                        /* --------------------------------- Contact US Section ends  
+                                                -------------------------------------------------------*/
+
+                                                /* --------------------------------- Footer  Section starts  
+                        -------------------------------------------------------*/
+
+footer {
+  padding: 5rem 0;
+  background-color: #182334;
+  color: #fff;
+}
+
+footer h2 {
+  color: #fff;
+}
+
+footer li {
+  list-style: none;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: #fff;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
+footer li:hover {
+  color: var(--primary-color);
+}
+
+footer .fontawesome-style {
+  font-size: 2.3rem;
+  color: var(--primary-color);
+  background-color: transparent;
+  width: 0rem;
+  height: 0rem;
+  margin: 2rem 0;
+  cursor: pointer;
+}
+
+footer .fontawesome-style:hover {
+  transition: all 1s;
+  animation: rotatefont 1s linear infinite alternate-reverse;
+  color: #fff;
+}
+
+@keyframes rotatefont {
+  0% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+footer .main-hero-para {
+  margin: 0;
+}
+
+/* --------------------------------- Footer  Section ends  
+                        -------------------------------------------------------*/
+
+                        
