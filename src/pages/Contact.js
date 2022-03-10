@@ -1,9 +1,15 @@
 import React from 'react'
-
-const Contact = () => {
+import Navbar from '../Navbar.js'
+import Footer from '../Footer.js'
+import Contact from '../Contact.js'
+const ContactUs = () => {
   return (
-    <div><h1>dhbsdknac</h1>Contact</div>
+    <>
+        <Navbar/>
+        <Contact/>
+        <Footer/>
+    </>
   )
 }
 
-export default Contact
+export default ContactUs

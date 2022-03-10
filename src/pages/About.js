@@ -1,11 +1,15 @@
 import React from 'react'
-
-const About = () => {
+import Navbar from '../Navbar.js'
+import Footer from '../Footer.js'
+import About from '../About.js'
+const AboutMe = () => {
   return (
     <>
-    <h1>dbjkadsnca</h1>
+    <Navbar/>
+    <About/>
+    <Footer/>
     </>
   )
 }
 
-export default About
+export default AboutMe

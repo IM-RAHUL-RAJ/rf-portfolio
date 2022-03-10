@@ -1,9 +1,16 @@
 import React from 'react'
+import Navbar from '../Navbar.js'
+import Footer from '../Footer.js'
+import Skill from '../Skills.js'
 
-const Skills = () => {
+const Skillset = () => {
   return (
-    <div>Skills</div>
+    <>
+        <Navbar/>
+        <Skill/>
+        <Footer/>
+    </>
   )
 }
 
-export default Skills
+export default Skillset

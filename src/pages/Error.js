@@ -1,8 +1,14 @@
 import React from 'react'
-
+import Navbar from '../Navbar.js'
+import Footer from '../Footer.js'
+import Error404 from '../Error404.js'
 const Error = () => {
   return (
-    <div>Error</div>
+    <>
+    <Navbar/>
+    <Error404/>
+    <Footer/>
+    </>
   )
 }
 

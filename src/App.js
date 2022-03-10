@@ -10,6 +10,10 @@ import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 import Skills from "./pages/Skills";
 function App() {
+
+  const list=[
+    'About','Contact','Skills','Error',''
+  ];
   return (
     <>
      
@@ -19,8 +23,8 @@ function App() {
     <Route path="/About" element={<About/>}/>
     <Route path="/Contact" element={<Contact/>}/>
     <Route path="/Skills" element={<Skills/>}/>
-
-    <Route path="/Error" element={<Error/>}/>
+    
+    <Route path="*" element={<Error/>}/>
      </Routes>
   
     
