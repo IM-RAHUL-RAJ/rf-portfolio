@@ -1,6 +1,54 @@
-import React from 'react'
+import React,{useState} from 'react'
 
  const Contact = () => {
+     const [userData,setUserData]=useState({
+         firstName:"",
+         lastName:"",
+         mobile:"",
+         email:"",
+         message:"",
+
+     })
+
+     let name,value;
+     const postUserData=(event)=>{
+        name=event.target.name;
+        value=event.target.value;
+        setUserData({...userData,[name]:value});
+
+     }
+
+     const submitData=async(event)=>{
+         event.preventDefault();
+         const {firstName, lastName,mobile, email,message}=userData;
+
+         const result=await fetch('https://portfolio-ba256-default-rtdb.firebaseio.com/userDataRecords.json',
+         {
+            method:"POST",
+            headers:{
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                firstName,
+                lastName,
+                mobile,
+                email,
+                message,
+
+            }),
+         }
+         );
+
+
+         if(result){
+             alert("Data Stored");
+         }
+         else{
+             alert("Please fill the data");
+         }
+     }
+
+    //  https://main-portfolio-6bfdd-default-rtdb.firebaseio.com/
   return (
     <>
         <section className="contactus-section">
@@ -32,8 +80,8 @@ import React from 'react'
                           id=""
                           className="form-control"
                           placeholder="First Name"
-                        //   value={userData.firstName}
-                        //   onChange={postUserData}
+                          value={userData.firstName}
+                          onChange={postUserData}
                         />
                       </div>
                       <div className="col-12 col-lg-6 contact-input-feild">
@@ -43,8 +91,8 @@ import React from 'react'
                           id=""
                           className="form-control"
                           placeholder="Last Name"
-                        //   value={userData.lastName}
-                        //   onChange={postUserData}
+                          value={userData.lastName}
+                          onChange={postUserData}
                         />
                       </div>
                     </div>
@@ -52,12 +100,12 @@ import React from 'react'
                       <div className="col-12 col-lg-6 contact-input-feild">
                         <input
                           type="text"
-                          name="phone"
+                          name="mobile"
                           id=""
                           className="form-control"
-                          placeholder="Phone Number "
-                        //   value={userData.phone}
-                        //   onChange={postUserData}
+                          placeholder="Mobile Number "
+                          value={userData.mobile}
+                          onChange={postUserData}
                         />
                       </div>
                       <div className="col-12 col-lg-6 contact-input-feild">
@@ -67,24 +115,12 @@ import React from 'react'
                           id=""
                           className="form-control"
                           placeholder="Email ID"
-                        //   value={userData.email}
-                        //   onChange={postUserData}
+                          value={userData.email}
+                          onChange={postUserData}
                         />
                       </div>
                     </div>
-                    <div className="row">
-                      <div className="col-12 contact-input-feild">
-                        <input
-                          type="text"
-                          name="address"
-                          id=""
-                          className="form-control"
-                          placeholder="Add Address"
-                        //   value={userData.address}
-                        //   onChange={postUserData}
-                        />
-                      </div>
-                    </div>
+                    
 
                     <div className="row">
                       <div className="col-12 ">
@@ -94,8 +130,8 @@ import React from 'react'
                           id=""
                           className="form-control"
                           placeholder="Enter Your Message"
-                        //   value={userData.message}
-                        //   onChange={postUserData}
+                          value={userData.message}
+                          onChange={postUserData}
                         />
                       </div>
                     </div>
@@ -109,16 +145,16 @@ import React from 'react'
                       <label
                         class="form-check-label"
                         className="main-hero-para">
-                        I agree that the thapatechnicalpay may contact me at the
-                        email address or phone number above
+                        I agree that the owner of this site may contact me at the
+                        email address or mobile number above
                       </label>
                     </div>
 
                     <button
                       type="submit"
-                      className="btn btn-style w-100">
-                    {/* //   onClick={submitData}>
-                    //   Submit */}
+                      className="btn btn-style w-100"
+                       onClick={submitData}>
+                       Submit
                     </button>
                   </form>
                 </div>
