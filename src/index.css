@@ -52,6 +52,7 @@ h1,h2,h3,h4,h5,h6{
                         
                         .navbar-brand {
                           font-size: 2.5rem;
+                          color:purple;
                         }
                         
                         .navbar li {
