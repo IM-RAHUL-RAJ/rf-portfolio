@@ -497,4 +497,27 @@ footer .main-hero-para {
 /* --------------------------------- 404 Error Page Section  Ends
                         -------------------------------------------------------*/
 
+
+/* --------------------------------- responsive media queries  
+                        -------------------------------------------------------*/
+                        @media (min-width: 1500px) {
+                          .container,
+                          .container-lg,
+                          .container-md,
+                          .container-sm,
+                          .container-xl,
+                          .container-xxl {
+                            max-width: 1500px !important;
+                          }
+                        }
                         
+                        @media (min-width: 1400px) {
+                          .container,
+                          .container-lg,
+                          .container-md,
+                          .container-sm,
+                          .container-xl,
+                          .container-xxl {
+                            max-width: 1400px;
+                          }
+                        }
